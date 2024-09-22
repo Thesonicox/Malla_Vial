@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const calzada_controllers_1 = require("../controllers/calzada.controllers");
+const router = (0, express_1.Router)();
+router.post('/calzada', calzada_controllers_1.createCalzada);
+router.get('/calzada', calzada_controllers_1.getCalzadas);
+router.put('/calzada/:id', calzada_controllers_1.updateCalzada);
+router.delete('/calzada/:id', calzada_controllers_1.deleteCalzada);
+router.get('/calzada/:id', calzada_controllers_1.getCalzada);
+exports.default = router;

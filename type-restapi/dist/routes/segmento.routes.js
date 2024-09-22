@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const segmentos_controllers_1 = require("../controllers/segmentos.controllers");
+const router = (0, express_1.Router)();
+router.post('/segmento', segmentos_controllers_1.createSegmento);
+router.get('/segmento', segmentos_controllers_1.getSegmentos);
+router.put('/segmento/:id', segmentos_controllers_1.updateSegmento);
+router.delete('/segmento/:id', segmentos_controllers_1.deleteSegmento);
+router.get('/segmento/:id', segmentos_controllers_1.getSegmentoById);
+exports.default = router;

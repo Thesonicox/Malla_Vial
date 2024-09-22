@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const bordillo_controllers_1 = require("../controllers/bordillo.controllers");
+const router = (0, express_1.Router)();
+router.post('/bordillo', bordillo_controllers_1.createBordillo);
+router.get('/bordillo', bordillo_controllers_1.getBordillos);
+router.put('/bordillo/:id', bordillo_controllers_1.updateBordillo);
+router.delete('/bordillo/:id', bordillo_controllers_1.deleteBordillo);
+router.get('/bordillo/:id', bordillo_controllers_1.getBordillo);
+exports.default = router;
